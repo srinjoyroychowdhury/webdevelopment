@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body {
+  font-family: 'Poppins', Arial, sans-serif; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("time.avif");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  background-opacity: 5%; 
+}
+
+.timer-container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 40px; 
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(108, 74, 74, 0.2);
+}
+
+#countdown {
+  font-size: 3rem; 
+  margin-top: 20px;
+  color: #333; 
+
+#startButton {
+  display: inline-block;
+  padding: 8px 8px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF; 
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+#startButton:hover {
+  background-color: #0056b3; 
+}
+.timer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #007BFF; 
+}
+
+.timer-label {
+  font-size: 1.2rem;
+  color: #777; 
+  margin-bottom: 5px;
+}
+
+/* Gradient text effect for the countdown */
+#countdown {
+  background: linear-gradient(45deg, #007BFF, #00C1FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Animate the countdown text gradient */
+@keyframes gradientChange {
+  0%, 100% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+}
+
+#countdown {
+  animation: gradientChange 3s linear infinite; /* Apply the gradient animation */
+}
+
+/* Floating animation for the timer container */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

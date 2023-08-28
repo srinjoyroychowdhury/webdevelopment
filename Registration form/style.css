@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("image.png");
+    background-size: cover;
+    background opacity: 50%;
+}
+.container{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background:transparent;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Header styling */
+header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Form styling */
+.form {
+    padding: 20px;
+}
+
+/* Title styling */
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Input field styling */
+.input-field {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+}
+
+/* Input and select styling */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    font-size: 14px;
+}
+
+/* Focused input and select styling */
+input:focus,
+select:focus {
+    border-color: #2980b9;
+}
+
+/* Button styling */
+button {
+    background-color: #2980b9;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #2471a3;
+}
+
+/* Output section styling */
+.output {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    margin-top: 20px;
+    animation: slide-in 0.5s ease-in-out;
+}
+
+.output h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.output p {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}

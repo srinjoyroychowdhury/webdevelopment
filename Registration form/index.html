@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <header>Form</header>
+
+        <form id="registrationForm">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="nameonmrk">Full Name <span class="error" id="nameonmrkErr" style="color: red;"></span></label>
+                            <input type="text" id="nameonmrk" name="nameonmrk" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="gender">Gender <span class="error" id="genderErr" style="color: red;"></span></label>
+                            <select id="gender" name="gender" required>
+                                <option disabled selected value="">Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob">
+                        </div>
+
+                        <div class="input-field">
+                            <label for="email">Email<span class="error" id="emailErr" style="color: red;"></span></label>
+                            <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="mobileno">Mobile Number  <span class="error" id="mobileErr" style="color: red;"></span></label>
+                            <input type="number" id="mobileno" name="mobileno" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="address">Address <span class="error" id="addressErr" style="color: red;"></span></label>
+                            <input type="text" id="address" name="address" placeholder="Enter address" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="city">City <span class="error" id="cityErr" style="color: red;"></span></label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="pincode">Pin Code <span class="error" id="pincodeErr" style="color: red;"></span></label>
+                            <input type="text" id="pincode" name="pincode" placeholder="Enter pin code" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="details ID">
+                    <span class="title"> Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="designation">Designation  <span class="error" id="designationErr" style="color: red;"></span></label>
+                            <select id="designation" name="designation" required>
+                                <option disabled selected value="">Select</option>
+                                <option value="Working">Working</option>
+                                <option value="Student">Student</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="comname">Organization Name  <span class="error" id="comnameErr" style="color: red;"></span></label>
+                            <input type="text" id="comname" name="comname" placeholder="Enter College/Company Name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="enroll">ID Number  <span class="error" id="enrollErr" style="color: red;"></span></label>
+                            <input type="number" id="enroll" name="enroll" placeholder="Enter ID Number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitBtn">Register</button>
+            </div>
+        </form>
+
+        <div class="output" id="output">
+            <h2>Registration Successful!</h2>
+            <p>Name: <span id="outputName"></span></p>
+            <p>Gender: <span id="outputGender"></span></p>
+                    <p>Email: <span id="outputEmail"></span></p>
+            <p>Mobile: <span id="outputMobile"></span></p>
+            <p>Address: <span id="outputAddress"></span></p>
+            <p>City: <span id="outputCity"></span></p>
+            <p>Pin Code: <span id="outputPinCode"></span></p>
+            <p>Designation: <span id="outputWorking"></span></p>
+            <p>Organization: <span id="outputComName"></span></p>
+            <p>ID Number: <span id="outputEnroll"></span></p>
+        </div>
+    </div>
+
+    <script>
+        const registrationForm = document.getElementById("registrationForm");
+        const output = document.getElementById("output");
+        const outputName = document.getElementById("outputName");
+        const outputGender = document.getElementById("outputGender");
+        const outputEmail = document.getElementById("outputEmail");
+        const outputMobile = document.getElementById("outputMobile");
+        const outputAddress = document.getElementById("outputAddress");
+        const outputCity = document.getElementById("outputCity");
+        const outputPinCode = document.getElementById("outputPinCode");
+        const outputWorking = document.getElementById("outputWorking");
+        const outputComName = document.getElementById("outputComName");
+        const outputEnroll = document.getElementById("outputEnroll");
+
+        registrationForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("nameonmrk").value;
+            const gender = document.getElementById("gender").value;
+            const email = document.getElementById("email").value;
+            const mobile = document.getElementById("mobileno").value;
+            const address = document.getElementById("address").value;
+            const city = document.getElementById("city").value;
+            const pinCode = document.getElementById("pincode").value;
+            const working = document.getElementById("designation").value;
+            const comName = document.getElementById("comname").value;
+            const enroll = document.getElementById("enroll").value;
+
+            outputName.textContent = name;
+            outputGender.textContent = gender;
+            outputEmail.textContent = email;
+            outputMobile.textContent = mobile;
+            outputAddress.textContent = address;
+            outputCity.textContent = city;
+            outputPinCode.textContent = pinCode;
+            outputWorking.textContent = working;
+            outputComName.textContent = comName;
+            outputEnroll.textContent = enroll;
+
+            registrationForm.style.display = "none";
+            output.style.display = "block";
+        });
+    </script>
+</body>
+</html>
+
